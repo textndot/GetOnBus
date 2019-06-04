@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'progress/show'
+
   resources :users, only: [:new, :create, :validate]
   resources :sessions, only: [:new, :create, :destroy]
 

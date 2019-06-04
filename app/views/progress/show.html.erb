@@ -1,0 +1,17 @@
+<h1> Team Project Progress Timeline </h1>
+
+<table>
+    <tbody>
+        <tr class="row">
+            <% for i in (1..100) %>
+                <% if i==@progress %>
+                    <td class="one"><%= i %></td>
+                    <% next %>
+                <% else %>
+                    <td></td>
+                <% end %>
+            <% end %>
+        </tr>
+    </tbody>
+</table>
+<!--<%= @progress %>-->
