@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf8">
+        <link rel="stylesheet" href="sign_in.css" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap" rel="stylesheet">
+        <script src="jquery-3.4.1.min.js"></script>
+        <title>회원 가입</title>
+    </head>
+    <body>
+
+        <div class="signin">
+            <p>회원 가입</p>
+        </div>
+        <div class="container" id="warning">
+            <p>* 표시는 필수 입력 항목입니다.</p>
+        </div>
+        <form>
+            <table>
+                <tbody>
+                    <tr>
+                        <th class="inputitem">아이디(이메일) <sup>*</sup></th>
+                        <td><input class="removeOnFocus" type="email"</td>
+                    </tr>
+                    <tr>
+                        <th class="inputitem">팀 이름 <sup>*</sup></th>
+                        <td><input class="inputbox" type="text"></td>
+                    </tr>
+                    <tr>
+                        <th class="inputitem">비밀번호 <sup>*</sup></th>
+                        <td><input class="inputbox" type="password"></td>
+                    </tr>
+                    <tr>
+                        <th class="inputitem">비밀번호 확인 <sup>*</sup></th>
+                        <td><input class="inputbox" type="password"></td>
+                    </tr>
+                    <tr>
+                        <th class="inputitem">팀플 시작 날짜 <sup>*</sup></th>
+                        <td><input class="inputbox" type="date" id="num"></td>
+                    </tr>
+                    <tr>
+                        <th class="inputitem">팀플 종료 날짜 <sup>*</sup></th>
+                        <td><input class="inputbox" type="date" id="num"></td>
+                    </tr>
+                </tbody>
+            </table>
+
+
+
+
+
+        <form>
+        <button class="button" type="submit" formaction="./log_in.html">가입하기</button>
+        </form>
+
+        <script>
+
+        $(document).ready(function(){
+        $('.removeOnFocus').each(function()
+        {this.data = new Object(); //TODO don't overwrite previous data
+        this.data.value = this.value;
+        $(this).focus(function(){
+          if (this.value == this.data.value)
+              this.value = '';});
+        $(this).blur(function(){
+          if (this.value == '')
+              this.value = this.data.value;});});});
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,494 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,300,400,500,700,900');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap');
+@font-face {
+
+   font-family: 'typofactory';
+   src: url('Typo_FactoryM.ttf');
+}
+
+html {cursor: default;
+      scroll-behavior: smooth;
+      font-family: 'Noto Sans KR';}
+body {overflow-x: hidden;
+      font-family: 'Noto Sans KR';}
+
+hr {margin: 0px;
+    height: 1px;}
+
+a {text-decoration: none;
+    color:black;}
+
+
+    /* 최상단 로고 ~ 로그아웃 같이 있는 박스 부분 */
+    .top-bar {
+        position: fixed;
+        top: 0px;
+        left: -1px;
+        width: 120%;
+        height: 72.5px;
+        background-color: rgba(255, 255, 255, 1);
+        padding-bottom: 9px;
+        border-bottom: 0.1px solid #979797;
+        z-index: 4;
+    }
+
+    /* 웹프로그래밍 개론~회의록 버튼 있는 부분 box */
+    .nav-bar {z-index: 3;
+        position: fixed;
+        top: 81px;
+        width: 100%;
+        height: 69px;
+    }
+
+    /* '웹프로그래밍 개론' 들어있는 박스 */
+    .course {z-index: 3;
+        width: 230px;
+        height: 69px;
+        position: relative;
+        top: -1.1px;
+        left: 50px;
+        background-color: white;
+        opacity: 0.8;
+        text-align: center;
+        border-top: none;
+        display: inline-block;
+        box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.09);
+        border: solid 0.1px #979797;}
+
+    /* '웹프로그래밍 개론' (수업명)텍스트 부분 */
+    .course p {
+        width: 146px;
+        height: 29px;
+        font-family: 'Noto Sans KR';
+        font-size: 18.3px;
+        font-weight: 400;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: -0.7px;
+        color: #000000;
+        margin-block-start: 0em;
+        margin-block-end: 0em;
+        margin: auto;
+        position: relative;
+        top: 18px;}
+
+
+        /*
+
+
+
+
+
+
+
+        */
+
+
+/*왼쪽 바 호버 액션*/
+.left_top_nav_3:hover {
+  background-color: #5586ff;
+  cursor: pointer;
+}
+.left_top_nav_3 {transition: 0.2s;}
+.left_bottom_nav:hover {
+  background-color: #5586ff;
+  cursor: pointer;
+}
+
+
+/*왼쪽 바 전체*/
+.left_nav_bar
+{ display: block;
+  width: 339px;
+  height: 100%;
+  border: solid 0.1px #979797;
+  background-color: #ffffff;
+  position: fixed;
+  top: 80px;
+  left: 0px;
+  z-index: 2;
+}
+
+/*왼쪽 상단 바*/
+/*시간표 회의록 팀검색 팀생성*/
+.left_top_nav
+{display: inherit;
+padding-left: 0px;
+position: relative;
+top: 100px;
+width: 100%;
+list-style: none;
+font-family: 'Noto Sans KR';
+font-size: 18px;
+font-weight: 400;
+line-height: 3;
+text-align: center;
+border-bottom: 0.1px;
+margin: 0px;}
+
+/*로그아웃 부분*/
+.left_bottom_nav
+{display: inherit;
+padding-left: 0px;
+position: absolute;
+bottom: 80px;
+width: 100%;
+list-style: none;
+font-family: 'Noto Sans KR';
+font-size: 17px;
+font-weight: 400;
+line-height: 3;
+text-align: center;
+border-bottom: 1px;
+margin: 0px;
+transition: 0.2s;}
+
+
+/*팀 검색*/
+#search_team_name
+{display: inline-block;
+  position: relative;
+  width: 230px;
+  height: 40px;
+  margin-bottom: 10px;
+  margin-top: -10px;
+  padding-left: 10px;
+  font-size: 15px;
+  color: gray;}
+
+#search_team_name:focus
+{outline:none;box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.3);
+border-style: solid;
+border-width: 0px;}
+
+
+/*
+
+
+
+
+
+
+
+*/
+
+/* 시간표 설명 부분 ( 안되는 시간을 선택하여 회의 시간을 정해보세요 ) */
+.main_sentence {
+    width: 415px;
+    height: 150px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 26px;
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.5;
+    letter-spacing: -0.4px;
+    color: #3b3b3b;
+    position: relative;
+    left: 380px;
+    top: 140px;
+    display: inline-block;
+    overflow: hidden;
+  }
+
+.blue {
+    font-weight: 400;
+    color: #5586ff;
+}
+
+
+/* 시간표 */
+
+table {border-collapse: collapse;}
+
+/* 시간표 한 칸 )*/
+td  {border-color: lightgray;
+    border-style: dotted;
+    border-width: 0.1px;}
+
+/* 시간표 박스 전체 */
+.tablebox
+{display: block;
+padding-top: 15px;
+padding-bottom: 10px;
+padding-left: 3px;
+padding-right: 8px;
+position: absolute;
+right:4%;
+box-shadow: 0 16px 30px -14px rgba(0, 0, 0, 0.5);
+position: absolute;
+top: 130px;}
+
+
+/* 시간표 요일 적힌 칸 (월화수목금토일)*/
+.timeTableCellDay
+{width: 40px;
+text-align:center;
+height: 30px;
+font-size: 13px;
+font-family: 'Noto Sans KR';
+border:0px solid;
+cursor: default;}
+
+/* 시간표 시간 적힌 칸 */
+.timeTableCellTime
+{width: 50px;
+text-align:center;
+height: 40px;
+font-size: 11px;
+margin-right: 10px;
+vertical-align: top;
+border:0px solid;
+cursor: default;
+font-family: 'Open Sans', sans-serif;
+}
+
+
+/* 시간표 한 칸 */
+.timeTableCell
+{width: 100px;
+text-align: center;
+height: 55px;
+background-size:cover;
+background-repeat: no-repeat;
+border-radius: 3px;
+opacity: 0;
+transition: 0.1s;
+cursor: pointer;}
+
+.timeTableCell:hover {opacity: 100;transition: 0.2s;}
+
+#c1-1, #c2-1, #c3-1, #c4-1, #c5-1, #c6-1, #c7-1, #c8-1, #c9-1, #c10-1, #c11-1, #c12-1, #c13-1
+{background-image: url('cell_01.png');}
+#c1-2, #c2-2, #c3-2, #c4-2, #c5-2, #c6-2, #c7-2, #c8-2, #c9-2, #c10-2, #c11-2, #c12-2, #c13-2
+{background-image: url('cell_02.png')}
+#c1-3, #c2-3, #c3-3, #c4-3, #c5-3, #c6-3, #c7-3, #c8-3, #c9-3, #c10-3, #c11-3, #c12-3, #c13-3
+{background-image: url('cell_03.png')}
+#c1-4, #c2-4, #c3-4, #c4-4, #c5-4, #c6-4, #c7-4, #c8-4, #c9-4, #c10-4, #c11-4, #c12-4, #c13-4
+{background-image: url('cell_04.png')}
+#c1-5, #c2-5, #c3-5, #c4-5, #c5-5, #c6-5, #c7-5, #c8-5, #c9-5, #c10-5, #c11-5, #c12-5, #c13-5
+{background-image: url('cell_05.png')}
+#c1-6, #c2-6, #c3-6, #c4-6, #c5-6, #c6-6, #c7-6, #c8-6, #c9-6, #c10-6, #c11-6, #c12-6, #c13-6
+{background-image: url('cell_06.png')}
+#c1-7, #c2-7, #c3-7, #c4-7, #c5-7, #c6-7, #c7-7, #c8-7, #c9-7, #c10-7, #c11-7, #c12-7, #c13-7
+{background-image: url('cell_07.png')}
+
+/* 초기화 버튼 부분 비활성화시 */
+.Oval {
+    width: 100px;
+    height: 100px;
+    border: solid 1px #5586ff;
+    border-radius: 100%;
+    position: absolute;
+    top: 820px;
+    left: 400px;
+    display: inline-table;
+    clear: both;
+    overflow: hidden;
+    z-index: 0;
+    text-align:center;
+    vertical-align: middle;
+    transition: .5s;
+    cursor: pointer;
+    background-color: #5586ff;
+    box-shadow: 0 0 8px 2px rgba(0, 0, 0, 0.08);
+}
+
+
+.Oval_text {
+  display: inline-block;
+  margin: auto;
+  margin-top: 40px;
+}
+
+/* 초기화 버튼 부분 활성화시 */
+.Oval:hover {
+background-color:white;
+  box-shadow: 0 0 10px 5px rgba(85, 134, 255, 0.8);
+}
+
+/*
+
+
+
+
+
+
+
+*/
+/*회의록 설명 파트 */
+.main_sentence2 {
+    width: 415px;
+    height: 150px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 26px;
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.5;
+    letter-spacing: -0.4px;
+    color: #3b3b3b;
+    position: relative;
+    left: 380px;
+    top: 1090px;
+    display: inline-block;
+    overflow: hidden;
+  }
+
+/* 회의록 전체 요소들 담고 있는 부분 */
+.container {
+    width: auto;
+    height: 750px;
+    position: absolute;
+    top: 1300px;
+    display: block;
+    margin-bottom: 20px;
+    right:4%;
+}
+
+/* 지난 회의록 및 날짜 선택 박스 전체 담고 있는 부분 */
+.date_nav {
+    position: relative;
+    top: -50px;
+    margin-bottom: 10px;
+    float: left;
+}
+
+/* '지난 회의록 텍스트 */
+.past {
+    font-family: 'Noto Sans KR';
+    width: 150px;
+    margin-top: 10px;
+    margin-bottom: -5px;
+    border-radius: 10px;
+    border: 1px #dfdfdf;
+    font-size: 13px;
+    letter-spacing: -0.5px;
+    color: #000000;
+    text-align: center;
+    background-color: #dfdfdf;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    box-shadow: 0 8px 30px -14px rgba(0, 0, 0, 0.5);
+}
+
+/* 날짜 박스 부분 */
+.date {
+    width: 150px;
+    border-radius: 10px;
+    box-shadow: 0 8px 30px -14px rgba(0, 0, 0, 0.5);
+    background-color: #ffffff;
+    text-align: center;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    font-size: 13px;
+    margin-bottom: -10px;
+    font-weight: 400;
+    font-family: 'Open Sans', sans-serif;
+
+}
+
+.date_nav a {
+    text-decoration: none;
+    color: #474747;
+}
+
+.date_nav a:hover {
+    text-decoration: none;
+}
+
+.date:hover {background-color: #5586ff;}
+
+/* 회의록 작성 상단 바 및 작성 부분 담고 있는 박스 */
+.textfield {
+    width: auto;
+    height: auto;
+    float: left;
+    position: relative;
+    top: -40px;
+    margin-left: 50px;
+}
+
+.textfield: hover {border: 0px;}
+
+/* 회의록 상단 바 */
+.upper {
+    width: 605px;
+    height: 60px;
+    background-color: #ffffff;
+    box-shadow: 0 8px 30px -14px rgba(0, 0, 0, 0.5);
+
+}
+
+/* 제목 작성 부분 */
+.upper #title {
+    font-family: 'Noto Sans KR';
+    float: left;
+    margin-top: 7px;
+    margin-left: 30px;
+    width: 400px;
+    height: 18px;
+    border: none;
+    border-radius: 6px;
+    font-size: 17px;
+    font-weight: 300;
+    padding-left: 0px;
+    padding-top: 15px;
+    color: #0C0C0C;
+}
+
+.upper #title:focus {outline: none;}
+
+
+/* 저장 버튼 부분 */
+.upper #save {
+    font-family: 'Noto Sans KR';
+    float: right;
+    margin-top: 13px;
+    margin-right: 20px;
+    background-color: #5586ff;
+    border-radius: 6px;
+    border-style: none;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.08);
+    width: 100px;
+    height: 30px;
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.upper button:focus {
+    outline: none;
+}
+
+/* 회의록 작성 부분 담고 있는 박스 */
+.notepad {
+    width: 600px;
+    height: 700px;
+    box-shadow: 0 16px 30px -14px rgba(0, 0, 0, 0.5);
+    background-color: #ffffff;
+    margin-top: 10px;
+    right: 20px;
+    margin-bottom: 80px;
+}
+
+/* 회의록 작성 부분 */
+.notepad #field {
+    width: 500px;
+    height: 600px;
+    display: block;
+    resize: none;
+    border: none;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #0C0C0C;
+    font-weight: 300;
+    font-family: 'Noto Sans KR';
+    padding-top: 25px;
+    margin-left: 25px;
+    line-height: 1.5;
+    padding-right: 15px;
+}
+
+.notepad #field:focus {outline: none;}

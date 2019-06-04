@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" name="viewport" content="width=device-width">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="index3.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR" rel="stylesheet">
+    <script src="jquery-3.4.1.min.js"></script>
+
+  </head>
+
+  <body>
+<!--
+<div class="boxarea">
+<div class="box" id="box1" onclick="myFunction()"></div>
+<div class="box" id="box2" onclick="myFunction()"></div>
+<div class="box" id="box3"></div>
+<div class="box" id="box4"></div>
+<div class="box" id="box5"></div>
+</div>
+
+-->
+
+<div class="tablebox">
+<table>
+<tbody>
+<tr>
+<td class="timeTableCellDay"></td>
+<td class="timeTableCellDay">월</td>
+<td class="timeTableCellDay">화</td>
+<td class="timeTableCellDay">수</td>
+<td class="timeTableCellDay">목</td>
+<td class="timeTableCellDay">금</td>
+<td class="timeTableCellDay">토</td>
+<td class="timeTableCellDay">일</td>
+</tr>
+<tr id="line1">
+<td class="timeTableCellTime">9:00</td>
+<td><div class="timeTableCell" id="c1-1" ></div></td>
+<td><div class="timeTableCell" id="c1-2" ></div></td>
+<td><div class="timeTableCell" id="c1-3" ></div></td>
+<td><div class="timeTableCell" id="c1-4" ></div></td>
+<td><div class="timeTableCell" id="c1-5" ></div></td>
+<td><div class="timeTableCell" id="c1-6" ></div></td>
+<td><div class="timeTableCell" id="c1-7" ></div></td>
+</tr>
+<tr id="line2">
+<td class="timeTableCellTime">10:00</td>
+<td><div class="timeTableCell" id="c2-1" ></div></td>
+<td><div class="timeTableCell" id="c2-2" ></div></td>
+<td><div class="timeTableCell" id="c2-3" ></div></td>
+<td><div class="timeTableCell" id="c2-4" ></div></td>
+<td><div class="timeTableCell" id="c2-5" ></div></td>
+<td><div class="timeTableCell" id="c2-6" ></div></td>
+<td><div class="timeTableCell" id="c2-7" ></div></td>
+</tr>
+<tr id="line3">
+<td class="timeTableCellTime">11:00</td>
+<td><div class="timeTableCell" id="c3-1" ></div></td>
+<td><div class="timeTableCell" id="c3-2" ></div></td>
+<td><div class="timeTableCell" id="c3-3" ></div></td>
+<td><div class="timeTableCell" id="c3-4" ></div></td>
+<td><div class="timeTableCell" id="c3-5" ></div></td>
+<td><div class="timeTableCell" id="c3-6" ></div></td>
+<td><div class="timeTableCell" id="c3-7" ></div></td>
+</tr>
+<tr id="line4">
+<td class="timeTableCellTime">12:00</td>
+<td><div class="timeTableCell" id="c4-1" ></div></td>
+<td><div class="timeTableCell" id="c4-2" ></div></td>
+<td><div class="timeTableCell" id="c4-3" ></div></td>
+<td><div class="timeTableCell" id="c4-4" ></div></td>
+<td><div class="timeTableCell" id="c4-5" ></div></td>
+<td><div class="timeTableCell" id="c4-6" ></div></td>
+<td><div class="timeTableCell" id="c4-7" ></div></td>
+</tr>
+<tr id="line5">
+<td class="timeTableCellTime">13:00</td>
+<td><div class="timeTableCell" id="c5-1" ></div></td>
+<td><div class="timeTableCell" id="c5-2" ></div></td>
+<td><div class="timeTableCell" id="c5-3" ></div></td>
+<td><div class="timeTableCell" id="c5-4" ></div></td>
+<td><div class="timeTableCell" id="c5-5" ></div></td>
+<td><div class="timeTableCell" id="c5-6" ></div></td>
+<td><div class="timeTableCell" id="c5-7" ></div></td>
+</tr>
+<tr id="line6">
+<td class="timeTableCellTime">14:00</td>
+<td><div class="timeTableCell" id="c6-1" ></div></td>
+<td><div class="timeTableCell" id="c6-2" ></div></td>
+<td><div class="timeTableCell" id="c6-3" ></div></td>
+<td><div class="timeTableCell" id="c6-4" ></div></td>
+<td><div class="timeTableCell" id="c6-5" ></div></td>
+<td><div class="timeTableCell" id="c6-6" ></div></td>
+<td><div class="timeTableCell" id="c6-7" ></div></td>
+</tr>
+<tr id="line7">
+<td class="timeTableCellTime">15:00</td>
+<td><div class="timeTableCell" id="c7-1" ></div></td>
+<td><div class="timeTableCell" id="c7-2" ></div></td>
+<td><div class="timeTableCell" id="c7-3" ></div></td>
+<td><div class="timeTableCell" id="c7-4" ></div></td>
+<td><div class="timeTableCell" id="c7-5" ></div></td>
+<td><div class="timeTableCell" id="c7-6" ></div></td>
+<td><div class="timeTableCell" id="c7-7" ></div></td>
+</tr>
+<tr id="line8">
+<td class="timeTableCellTime">16:00</td>
+<td><div class="timeTableCell" id="c8-1" ></div></td>
+<td><div class="timeTableCell" id="c8-2" ></div></td>
+<td><div class="timeTableCell" id="c8-3" ></div></td>
+<td><div class="timeTableCell" id="c8-4" ></div></td>
+<td><div class="timeTableCell" id="c8-5" ></div></td>
+<td><div class="timeTableCell" id="c8-6" ></div></td>
+<td><div class="timeTableCell" id="c8-7" ></div></td>
+</tr>
+<tr id="line9">
+<td class="timeTableCellTime">17:00</td>
+<td><div class="timeTableCell" id="c9-1" ></div></td>
+<td><div class="timeTableCell" id="c9-2" ></div></td>
+<td><div class="timeTableCell" id="c9-3" ></div></td>
+<td><div class="timeTableCell" id="c9-4" ></div></td>
+<td><div class="timeTableCell" id="c9-5" ></div></td>
+<td><div class="timeTableCell" id="c9-6" ></div></td>
+<td><div class="timeTableCell" id="c9-7" ></div></td>
+</tr>
+<tr id="line10">
+<td class="timeTableCellTime">18:00</td>
+<td><div class="timeTableCell" id="c10-1" ></div></td>
+<td><div class="timeTableCell" id="c10-2" ></div></td>
+<td><div class="timeTableCell" id="c10-3" ></div></td>
+<td><div class="timeTableCell" id="c10-4" ></div></td>
+<td><div class="timeTableCell" id="c10-5" ></div></td>
+<td><div class="timeTableCell" id="c10-6" ></div></td>
+<td><div class="timeTableCell" id="c10-7" ></div></td>
+</tr>
+<tr id="line11">
+<td class="timeTableCellTime">19:00</td>
+<td><div class="timeTableCell" id="c11-1" ></div></td>
+<td><div class="timeTableCell" id="c11-2" ></div></td>
+<td><div class="timeTableCell" id="c11-3" ></div></td>
+<td><div class="timeTableCell" id="c11-4" ></div></td>
+<td><div class="timeTableCell" id="c11-5" ></div></td>
+<td><div class="timeTableCell" id="c11-6" ></div></td>
+<td><div class="timeTableCell" id="c11-7" ></div></td>
+</tr>
+<tr id="line12">
+<td class="timeTableCellTime">20:00</td>
+<td><div class="timeTableCell" id="c12-1" ></div></td>
+<td><div class="timeTableCell" id="c12-2" ></div></td>
+<td><div class="timeTableCell" id="c12-3" ></div></td>
+<td><div class="timeTableCell" id="c12-4" ></div></td>
+<td><div class="timeTableCell" id="c12-5" ></div></td>
+<td><div class="timeTableCell" id="c12-6" ></div></td>
+<td><div class="timeTableCell" id="c12-7" ></div></td>
+</tr>
+<tr id="line13">
+<td class="timeTableCellTime">21:00</td>
+<td><div class="timeTableCell" id="c13-1" ></div></td>
+<td><div class="timeTableCell" id="c13-2" ></div></td>
+<td><div class="timeTableCell" id="c13-3" ></div></td>
+<td><div class="timeTableCell" id="c13-4" ></div></td>
+<td><div class="timeTableCell" id="c13-5" ></div></td>
+<td><div class="timeTableCell" id="c13-6" ></div></td>
+<td><div class="timeTableCell" id="c13-7" ></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<script>
+
+var array = ['c1-1', 'c1-2', 'c1-3', 'c1-4', 'c1-5', 'c1-6', 'c1-7']
+var array2 = ['c2-1', 'c2-2', 'c2-3', 'c2-4', 'c2-5', 'c2-6', 'c2-7']
+var array3 = ['c3-1', 'c3-2', 'c3-3', 'c3-4', 'c3-5', 'c3-6', 'c3-7']
+var array4 = ['c4-1', 'c4-2', 'c4-3', 'c4-4', 'c4-5', 'c4-6', 'c4-7']
+var array5 = ['c5-1', 'c5-2', 'c5-3', 'c5-4', 'c5-5', 'c5-6', 'c5-7']
+var array6 = ['c6-1', 'c6-2', 'c6-3', 'c6-4', 'c6-5', 'c6-6', 'c6-7']
+var array7 = ['c7-1', 'c7-2', 'c7-3', 'c7-4', 'c7-5', 'c7-6', 'c7-7']
+var array8 = ['c8-1', 'c8-2', 'c8-3', 'c8-4', 'c8-5', 'c8-6', 'c8-7']
+var array9 = ['c9-1', 'c9-2', 'c9-3', 'c9-4', 'c9-5', 'c9-6', 'c9-7']
+var array10 = ['c10-1', 'c10-2', 'c10-3', 'c10-4', 'c10-5', 'c10-6', 'c10-7']
+var array11 = ['c11-1', 'c11-2', 'c11-3', 'c11-4', 'c11-5', 'c11-6', 'c11-7']
+var array12 = ['c12-1', 'c12-2', 'c12-3', 'c12-4', 'c12-5', 'c12-6', 'c12-7']
+var array13 = ['c13-1', 'c13-2', 'c13-3', 'c13-4', 'c13-5', 'c13-6', 'c13-7']
+
+
+
+$('#line1 td').click(function() {
+var i= $(this).index();
+var element = document.getElementById(array[i-1]);
+if (element.style.opacity === "100") {element.style.opacity = "0";element.style.transition ="0.2s";}
+else {element.style.opacity = "100";element.style.transition ="0.2s"}
+});
+
+
+$('#line2 td').click(function() {
+var i= $(this).index();
+var element = document.getElementById(array2[i-1]);
+if (element.style.opacity === "100") {element.style.opacity = "0";element.style.transition ="0.2s"}
+else {element.style.opacity = "100";element.style.transition ="0.2s"}});
+
+$('#line3 td').click(function() {
+var i= $(this).index();
+var element = document.getElementById(array3[i-1]);
+if (element.style.opacity === "100") {element.style.opacity = "0";element.style.transition ="0.2s"}
+else {element.style.opacity = "100";element.style.transition ="0.2s"}});
+
+$('#line4 td').click(function() {
+var i= $(this).index();
+var element = document.getElementById(array4[i-1]);
+if (element.style.opacity === "100") {element.style.opacity = "0";element.style.transition ="0.2s"}
+else {element.style.opacity = "100";element.style.transition ="0.2s"}});
+
+$('#line5 td').click(function() {
+var i= $(this).index();
+var element = document.getElementById(array5[i-1]);
+if (element.style.opacity === "100") {element.style.opacity = "0";element.style.transition ="0.2s"}
+else {element.style.opacity = "100";element.style.transition ="0.2s"}});
+
+$('#line6 td').click(function() {
+var i= $(this).index();
+var element = document.getElementById(array6[i-1]);
+if (element.style.opacity === "100") {element.style.opacity = "0";element.style.transition ="0.2s"}
+else {element.style.opacity = "100";element.style.transition ="0.2s"}});
+
+$('#line7 td').click(function() {
+var i= $(this).index();
+var element = document.getElementById(array7[i-1]);
+if (element.style.opacity === "100") {element.style.opacity = "0";element.style.transition ="0.2s"}
+else {element.style.opacity = "100";element.style.transition ="0.2s"}});
+
+$('#line8 td').click(function() {
+var i= $(this).index();
+var element = document.getElementById(array8[i-1]);
+if (element.style.opacity === "100") {element.style.opacity = "0";element.style.transition ="0.2s"}
+else {element.style.opacity = "100";element.style.transition ="0.2s"}});
+
+$('#line9 td').click(function() {
+var i= $(this).index();
+var element = document.getElementById(array9[i-1]);
+if (element.style.opacity === "100") {element.style.opacity = "0";element.style.transition ="0.2s"}
+else {element.style.opacity = "100";element.style.transition ="0.2s"}});
+
+$('#line10 td').click(function() {
+var i= $(this).index();
+var element = document.getElementById(array10[i-1]);
+if (element.style.opacity === "100") {element.style.opacity = "0";element.style.transition ="0.2s"}
+else {element.style.opacity = "100";element.style.transition ="0.2s"}});
+
+$('#line11 td').click(function() {
+var i= $(this).index();
+var element = document.getElementById(array11[i-1]);
+if (element.style.opacity === "100") {element.style.opacity = "0";element.style.transition ="0.2s"}
+else {element.style.opacity = "100";element.style.transition ="0.2s"}});
+
+$('#line12 td').click(function() {
+var i= $(this).index();
+var element = document.getElementById(array12[i-1]);
+if (element.style.opacity === "100") {element.style.opacity = "0";element.style.transition ="0.2s"}
+else {element.style.opacity = "100";element.style.transition ="0.2s"}});
+
+$('#line13 td').click(function() {
+var i= $(this).index();
+var element = document.getElementById(array13[i-1]);
+if (element.style.opacity === "100") {element.style.opacity = "0";element.style.transition ="0.2s"}
+else {element.style.opacity = "100";element.style.transition ="0.2s"}});
+
+
+
+</script>
+
+</body>
+</html>

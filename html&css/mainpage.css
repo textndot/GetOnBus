@@ -1,0 +1,439 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,300,400,500,700,900');
+
+html {scroll-behavior: smooth;
+      overflow-x: hidden;
+      cursor: default;}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {text-decoration: none;
+  color: black;}
+
+  hr {margin: 0px;
+      height: 1px;}
+
+#schoolbus {width:150px;
+          margin-top:0px;
+        display: inline-block;
+        position: relative;
+        left:100px;}
+
+
+/*왼쪽 바 호버 액션*/
+.left_top_nav_3:hover {
+  background-color: #5586ff;
+  cursor: pointer;
+}
+.left_top_nav_3 {transition: 0.2s;}
+.left_bottom_nav:hover {
+  background-color: #5586ff;
+  cursor: pointer;
+}
+
+
+/*왼쪽 바 전체*/
+.left_nav_bar
+{ display: block;
+  width: 339px;
+  height: 100%;
+  border: solid 0.1px #979797;
+  background-color: #ffffff;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 2;
+}
+
+/*왼쪽 상단 바*/
+/*시간표 회의록 팀검색 팀생성*/
+.left_top_nav
+{display: inherit;
+padding-left: 0px;
+position: relative;
+top: 0px;
+width: 100%;
+list-style: none;
+font-family: 'Noto Sans KR';
+font-size: 18px;
+font-weight: 400;
+line-height: 3;
+text-align: center;
+border-bottom: 0.1px;
+margin: 0px;}
+
+/*로그인.아웃 부분*/
+.left_bottom_nav
+{display: inherit;
+padding-left: 0px;
+position: absolute;
+bottom: 0px;
+width: 100%;
+list-style: none;
+font-family: 'Noto Sans KR';
+font-size: 17px;
+font-weight: 400;
+line-height: 3;
+text-align: center;
+border-bottom: 1px;
+margin: 0px;
+transition: 0.2s;}
+
+
+/*팀 검색*/
+#search_team_name
+{display: inline-block;
+  position: relative;
+  width: 230px;
+  height: 40px;
+  margin-bottom: 10px;
+  margin-top: -10px;
+  padding-left: 10px;
+  font-size: 15px;
+  color: gray;}
+
+#search_team_name:focus
+{outline:none;box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.3);
+border-style: solid;
+border-width: 0px;}
+
+/* 전체 화면 */
+.Rectangle {
+    background-color: #fafafa;
+}
+/* 좌측상단 로고 부분 - 이미지로 처리 */
+.logowhite {
+    position: fixed;
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    display: inline;
+    margin-top: -70px;
+    margin-left: 20px;
+}
+
+/* 우측상단 '로그인' 버튼 */
+#login {
+    width: 51px;
+    height: 36px;
+    font-family:'Noto Sans KR', sans-serif;
+    font-size: 17px;
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.89;
+    letter-spacing: -0.6px;
+    color: #3b3b3b;
+    display: inline;
+    position: absolute;
+    right:212px;
+    top:58px;
+    overflow:hidden;
+}
+
+#login a {color: #3b3b3b;}
+
+
+/* 우측상단 '회원가입' 버튼 테두리 부분 */
+.signin {
+    width: 130px;
+    height: 49px;
+    border-radius: 16px;
+    background-color: #e7e4e4;
+    display: inline;
+    padding: 10px 40px;
+    position: absolute;
+    right:50px;
+    top:50px;
+    overflow:hidden;
+
+}
+
+/* 우측상단 '회원가입' 글씨 있는 부분 */
+#signin {
+    width: 150px;
+    height: 36px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.5;
+    letter-spacing: -0.6px;
+    color: #3b3b3b;
+    display: inline;
+    text-align: center;
+    overflow:hidden;
+    margin-left: auto;
+    margin-top: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.signin:hover {cursor: pointer;}
+.signin:focus {outline: none;}
+
+/* [버스타자]가 여러분의 팀플을 도와드리겠습니다. */
+.main_sentence {
+    width: 800px;
+    height: 49px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 40px;
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.52;
+    letter-spacing: -0.4px;
+    color: #3b3b3b;
+    position: relative;
+    left: 470px;
+    top: 150px;
+  }
+
+.blue {
+    font-weight: 400;
+    color: #5586ff;
+}
+
+/* 하단 설명부분 '버스타자와 함께~' */
+.sub_sentence {
+    width: 581px;
+    height: 169px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 28px;
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.5;
+    letter-spacing: -0.8px;
+    color: #3b3b3b;
+    position: relative;
+    left: 470px;
+    top: 170px;
+}
+
+/* 메인페이지 일러스트 부분 */
+.illustration {
+    width: 70%;
+    height: 70%;
+    position: relative;
+    top: 100px;
+    left: 550px;
+    margin-bottom: 200px;
+}
+
+/* '버스타자 둘러보기' 바깥쪽 파란색 큰 box */
+.blue_box {
+    margin-top: 100px;
+    width: 100%;
+    height: 750px;
+    background-color: #5586ff;
+    z-index: -1;
+}
+
+/* '버스타자 둘러보기' 텍스트 부분 */
+.overview {
+    width: 400px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 40px;
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.67;
+    letter-spacing: normal;
+    text-align: center;
+    color: #ffffff;
+    padding: 50px 40px 20px 40px;
+    position: relative;
+    top: 50px;
+    border-bottom: 2px solid white;
+    left: 48.7%;
+    margin-right: auto;
+    margin-bottom: 100px;
+
+}
+/* 시간표 아이콘 있는 흰색 배경 부분 - 옆으로 4개 모두 동일한 CSS 코드 */
+.pictogram {
+    width: 168px;
+    height: 153px;
+    border-radius: 13px;
+    box-shadow: 0 3px 11px 0 rgba(0, 0, 0, 0.25);
+    border: solid 1px #f1efef;
+    background-color: #fafafa;
+    display: inline;
+    margin: 0 20px;
+}
+.container{
+  width: 850px;
+  height: auto;
+  position: relative;
+  top: 40px;
+  left: 180px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.pictogram 1,2,3,4 {
+  z-index: 5;
+}
+
+.pictogram 1 {
+  position: relative;
+}
+.pictogram 2 {
+  position: relative;
+}
+.pictogram 3 {
+  position: relative;
+}
+.pictogram 4 {
+  position: relative;
+}
+
+
+/* 픽토그램 하단 기능 이름 부분 - 시간표&회의록 */
+.below_pictogram1 {
+    width: 61px;
+    height: 29px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 22px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.32;
+    letter-spacing: normal;
+    text-align: center;
+    color: #ffffff;
+    position: relative;
+    top: 70px;
+    display: inline;
+    left: 190px;
+}
+
+.timetable {
+  padding: 20px 50px;
+  display: inline;
+  margin-right: 40px;
+}
+.team_management {
+  padding: 20px 50px;
+  display: inline;
+    margin-right: 40px;
+}
+.discussion {
+  padding: 20px 50px;
+  display: inline;
+    margin-right: 40px;
+}
+.notification {
+  padding: 20px 50px;
+  display: inline;
+}
+
+.below {
+  width: 830px;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+/* 픽토그램 하단 기능 이름 부분 - 팀원 관리&자동 알림 */
+.below_pictogram2 {
+    width: 86px;
+    height: 29px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 22px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.32;
+    letter-spacing: normal;
+    text-align: center;
+    color: #ffffff;
+    display: inline;
+    position: relative;
+    top: 70px;
+    margin-left: auto;
+    margin-right: auto;
+    left: 200px;
+
+}
+
+/* 기능 이름 하단 설명 부분 - 4개 전체 동일 */
+
+.description {
+    width: 149px;
+    font-family:'Noto Sans KR', sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.47;
+    letter-spacing: -0.3px;
+    color: #ffffff;
+    display: inline-block;
+    position: relative;
+    left: 235px;
+    top: 80px;
+    margin: 0 60px 0 0;
+    text-align: center;
+
+}
+
+.description.d{
+    top: 100px;
+}
+
+.container2 {
+  width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+.footer {
+  height: 100px;
+  position: relative;
+  float: right;
+}
+.mainpagebus{
+  width: 600px;
+  position: relative;
+  float: right;
+  margin-right: 100px;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+  top: -80px;
+}
+
+/* 우측 하단 '회원가입 하러 가기' 텍스트 부분 */
+.goto_signin {
+    width: 212px;
+    height: 58px;
+    object-fit: contain;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 22px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: -1px;
+    color: #000000;
+    position: relative;
+    top: -170px;
+    left: 430px;
+    font-weight: 300;
+
+}
+
+.arrow {
+  transform: rotate(270deg);
+  width: 100px;
+  position: relative;
+  float: right;
+  top: -185px;
+  right: 20px;
+
+}
+
+/* 회원가입 하러 가기 옆의 화살표는 이미지로 처리해야 될 듯*/
+
+a {text-decoration: none;}

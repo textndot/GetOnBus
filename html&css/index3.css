@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,300,400,500,700,900');
+html {scroll-behavior: smooth;}
+body {height: 3000px;
+      font-family: 'Noto Sans KR';
+      cursor: url(cursor.cur),auto;}
+
+table {border-collapse: collapse;}
+td {
+    border-color: lightgray;
+    border-style: dotted;
+    border-width: 0.1px;}
+
+.tablebox
+{display: block;
+padding-top: 15px;
+padding-bottom: 10px;
+padding-left: 5px;
+padding-right: 5px;
+position: absolute;
+right:5%;
+box-shadow: 0 16px 30px -14px rgba(0, 0, 0, 0.5);
+position: absolute;
+top: 130px;}
+
+.boxarea
+{width: 100%;
+height: 500px;}
+
+.timeTableCellDay
+{width: 40px;
+text-align:center;
+height: 30px;
+font-size: 13px;
+font-family: 'Noto Sans KR';
+border:0px solid;}
+
+.timeTableCellTime
+{width: 55px;
+text-align:center;
+height: 40px;
+font-size: 11px;
+margin-right: 10px;
+vertical-align: top;
+border:0px solid;}
+
+.timeTableCell
+{width: 80px;
+text-align: center;
+height: 50px;
+background-size:cover;
+background-repeat: no-repeat;
+border-radius: 3px;
+opacity: 0;
+transition: 0.1s;}
+
+.timeTableCell:hover {opacity: 100;transition: 0.2s;}
+
+#c1-1, #c2-1, #c3-1, #c4-1, #c5-1, #c6-1, #c7-1, #c8-1, #c9-1, #c10-1, #c11-1, #c12-1, #c13-1
+{background-image: url('cell_01.png');}
+#c1-2, #c2-2, #c3-2, #c4-2, #c5-2, #c6-2, #c7-2, #c8-2, #c9-2, #c10-2, #c11-2, #c12-2, #c13-2
+{background-image: url('cell_02.png')}
+#c1-3, #c2-3, #c3-3, #c4-3, #c5-3, #c6-3, #c7-3, #c8-3, #c9-3, #c10-3, #c11-3, #c12-3, #c13-3
+{background-image: url('cell_03.png')}
+#c1-4, #c2-4, #c3-4, #c4-4, #c5-4, #c6-4, #c7-4, #c8-4, #c9-4, #c10-4, #c11-4, #c12-4, #c13-4
+{background-image: url('cell_04.png')}
+#c1-5, #c2-5, #c3-5, #c4-5, #c5-5, #c6-5, #c7-5, #c8-5, #c9-5, #c10-5, #c11-5, #c12-5, #c13-5
+{background-image: url('cell_05.png')}
+#c1-6, #c2-6, #c3-6, #c4-6, #c5-6, #c6-6, #c7-6, #c8-6, #c9-6, #c10-6, #c11-6, #c12-6, #c13-6
+{background-image: url('cell_06.png')}
+#c1-7, #c2-7, #c3-7, #c4-7, #c5-7, #c6-7, #c7-7, #c8-7, #c9-7, #c10-7, #c11-7, #c12-7, #c13-7
+{background-image: url('cell_07.png')}

@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            팀원관리
+        </title>
+        <link rel="stylesheet" type="text/css" href="teammates.css">
+        <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap" rel="stylesheet">
+        <script src="jquery-3.4.1.min.js"></script>
+    </head>
+    <body>
+
+<!-- 상단 바, 수업명 박스 -->
+      <div class="Rectangle">
+          <div class="top-bar">
+          </div>
+          <div class="nav-bar">
+              <div class="course">
+                  <p> 웹프로그래밍 개론 </p>
+              </div>
+          </div>
+      </div>
+
+
+<!--왼쪽 내비 바-->
+    <div class="left_nav_bar">
+        <ul class="left_top_nav">
+            <hr>
+            <a href="#anchor1"><li class="left_top_nav_3">시간표</li></a>
+            <hr>
+            <a href="#anchor2"><li class="left_top_nav_3">회의록</li></a>
+            <hr>
+            <li class="left_top_nav_3">팀 생성</li>
+            <hr>
+            <li>팀 검색</li>
+            <input type="text" id="search_team_name" class="removeOnFocus" value="팀 이름을 입력하세요.">
+        </ul>
+        <ul class="left_bottom_nav">
+            <hr>
+            <li>로그아웃</li>
+            <hr>
+        <ul>
+    </div>
+
+  <!--시간표 파트-->
+  <div id="anchor1">
+        <!--초기화 버튼-->
+        <div class="Oval"><div class="Oval_text">초기화</div></div>
+        <!--시간표 기능 설명 문장-->
+        <div class="main_sentence">
+          안 되는 시간을 클릭하여<br><span class="blue">회의 시간</span>을 정해보세요.
+        </div>
+        <!--시간표 표 전체-->
+        <div class="tablebox">
+            <table>
+                <tbody>
+                <!--시간표 요일-->
+                <tr>
+                <td class="timeTableCellDay"></td>
+                <td class="timeTableCellDay">월</td>
+                <td class="timeTableCellDay">화</td>
+                <td class="timeTableCellDay">수</td>
+                <td class="timeTableCellDay">목</td>
+                <td class="timeTableCellDay">금</td>
+                <td class="timeTableCellDay">토</td>
+                <td class="timeTableCellDay">일</td>
+                </tr>
+                <!--첫 번째 행-->
+                <tr id="line1">
+                <td class="timeTableCellTime">9:00</td>
+                <td><div class="timeTableCell" id="c1-1" ></div></td>
+                <td><div class="timeTableCell" id="c1-2" ></div></td>
+                <td><div class="timeTableCell" id="c1-3" ></div></td>
+                <td><div class="timeTableCell" id="c1-4" ></div></td>
+                <td><div class="timeTableCell" id="c1-5" ></div></td>
+                <td><div class="timeTableCell" id="c1-6" ></div></td>
+                <td><div class="timeTableCell" id="c1-7" ></div></td>
+                </tr>
+                <!--두 번째 행-->
+                <tr id="line2">
+                <td class="timeTableCellTime">10:00</td>
+                <td><div class="timeTableCell" id="c2-1" ></div></td>
+                <td><div class="timeTableCell" id="c2-2" ></div></td>
+                <td><div class="timeTableCell" id="c2-3" ></div></td>
+                <td><div class="timeTableCell" id="c2-4" ></div></td>
+                <td><div class="timeTableCell" id="c2-5" ></div></td>
+                <td><div class="timeTableCell" id="c2-6" ></div></td>
+                <td><div class="timeTableCell" id="c2-7" ></div></td>
+                </tr>
+                <!--세 번째 행-->
+                <tr id="line3">
+                <td class="timeTableCellTime">11:00</td>
+                <td><div class="timeTableCell" id="c3-1" ></div></td>
+                <td><div class="timeTableCell" id="c3-2" ></div></td>
+                <td><div class="timeTableCell" id="c3-3" ></div></td>
+                <td><div class="timeTableCell" id="c3-4" ></div></td>
+                <td><div class="timeTableCell" id="c3-5" ></div></td>
+                <td><div class="timeTableCell" id="c3-6" ></div></td>
+                <td><div class="timeTableCell" id="c3-7" ></div></td>
+                </tr>
+                <!--네 번째 행-->
+                <tr id="line4">
+                <td class="timeTableCellTime">12:00</td>
+                <td><div class="timeTableCell" id="c4-1" ></div></td>
+                <td><div class="timeTableCell" id="c4-2" ></div></td>
+                <td><div class="timeTableCell" id="c4-3" ></div></td>
+                <td><div class="timeTableCell" id="c4-4" ></div></td>
+                <td><div class="timeTableCell" id="c4-5" ></div></td>
+                <td><div class="timeTableCell" id="c4-6" ></div></td>
+                <td><div class="timeTableCell" id="c4-7" ></div></td>
+                </tr>
+                <!--다섯 번째 행-->
+                <tr id="line5">
+                <td class="timeTableCellTime">13:00</td>
+                <td><div class="timeTableCell" id="c5-1" ></div></td>
+                <td><div class="timeTableCell" id="c5-2" ></div></td>
+                <td><div class="timeTableCell" id="c5-3" ></div></td>
+                <td><div class="timeTableCell" id="c5-4" ></div></td>
+                <td><div class="timeTableCell" id="c5-5" ></div></td>
+                <td><div class="timeTableCell" id="c5-6" ></div></td>
+                <td><div class="timeTableCell" id="c5-7" ></div></td>
+                </tr>
+                <!--여섯 번째 행-->
+                <tr id="line6">
+                <td class="timeTableCellTime">14:00</td>
+                <td><div class="timeTableCell" id="c6-1" ></div></td>
+                <td><div class="timeTableCell" id="c6-2" ></div></td>
+                <td><div class="timeTableCell" id="c6-3" ></div></td>
+                <td><div class="timeTableCell" id="c6-4" ></div></td>
+                <td><div class="timeTableCell" id="c6-5" ></div></td>
+                <td><div class="timeTableCell" id="c6-6" ></div></td>
+                <td><div class="timeTableCell" id="c6-7" ></div></td>
+                </tr>
+                <!--일곱번째 행-->
+                <tr id="line7">
+                <td class="timeTableCellTime">15:00</td>
+                <td><div class="timeTableCell" id="c7-1" ></div></td>
+                <td><div class="timeTableCell" id="c7-2" ></div></td>
+                <td><div class="timeTableCell" id="c7-3" ></div></td>
+                <td><div class="timeTableCell" id="c7-4" ></div></td>
+                <td><div class="timeTableCell" id="c7-5" ></div></td>
+                <td><div class="timeTableCell" id="c7-6" ></div></td>
+                <td><div class="timeTableCell" id="c7-7" ></div></td>
+                </tr>
+                <!--여덟 번째 행-->
+                <tr id="line8">
+                <td class="timeTableCellTime">16:00</td>
+                <td><div class="timeTableCell" id="c8-1" ></div></td>
+                <td><div class="timeTableCell" id="c8-2" ></div></td>
+                <td><div class="timeTableCell" id="c8-3" ></div></td>
+                <td><div class="timeTableCell" id="c8-4" ></div></td>
+                <td><div class="timeTableCell" id="c8-5" ></div></td>
+                <td><div class="timeTableCell" id="c8-6" ></div></td>
+                <td><div class="timeTableCell" id="c8-7" ></div></td>
+                </tr>
+                <!--아홉 번째 행-->
+                <tr id="line9">
+                <td class="timeTableCellTime">17:00</td>
+                <td><div class="timeTableCell" id="c9-1" ></div></td>
+                <td><div class="timeTableCell" id="c9-2" ></div></td>
+                <td><div class="timeTableCell" id="c9-3" ></div></td>
+                <td><div class="timeTableCell" id="c9-4" ></div></td>
+                <td><div class="timeTableCell" id="c9-5" ></div></td>
+                <td><div class="timeTableCell" id="c9-6" ></div></td>
+                <td><div class="timeTableCell" id="c9-7" ></div></td>
+                </tr>
+                <!--열 번째 행-->
+                <tr id="line10">
+                <td class="timeTableCellTime">18:00</td>
+                <td><div class="timeTableCell" id="c10-1" ></div></td>
+                <td><div class="timeTableCell" id="c10-2" ></div></td>
+                <td><div class="timeTableCell" id="c10-3" ></div></td>
+                <td><div class="timeTableCell" id="c10-4" ></div></td>
+                <td><div class="timeTableCell" id="c10-5" ></div></td>
+                <td><div class="timeTableCell" id="c10-6" ></div></td>
+                <td><div class="timeTableCell" id="c10-7" ></div></td>
+                </tr>
+                <!--열한 번째 행-->
+                <tr id="line11">
+                <td class="timeTableCellTime">19:00</td>
+                <td><div class="timeTableCell" id="c11-1" ></div></td>
+                <td><div class="timeTableCell" id="c11-2" ></div></td>
+                <td><div class="timeTableCell" id="c11-3" ></div></td>
+                <td><div class="timeTableCell" id="c11-4" ></div></td>
+                <td><div class="timeTableCell" id="c11-5" ></div></td>
+                <td><div class="timeTableCell" id="c11-6" ></div></td>
+                <td><div class="timeTableCell" id="c11-7" ></div></td>
+                </tr>
+                <!--열두 번째 행-->
+                <tr id="line12">
+                <td class="timeTableCellTime">20:00</td>
+                <td><div class="timeTableCell" id="c12-1" ></div></td>
+                <td><div class="timeTableCell" id="c12-2" ></div></td>
+                <td><div class="timeTableCell" id="c12-3" ></div></td>
+                <td><div class="timeTableCell" id="c12-4" ></div></td>
+                <td><div class="timeTableCell" id="c12-5" ></div></td>
+                <td><div class="timeTableCell" id="c12-6" ></div></td>
+                <td><div class="timeTableCell" id="c12-7" ></div></td>
+                </tr>
+                <!--열세 번째 행-->
+                <tr id="line13">
+                <td class="timeTableCellTime">21:00</td>
+                <td><div class="timeTableCell" id="c13-1" ></div></td>
+                <td><div class="timeTableCell" id="c13-2" ></div></td>
+                <td><div class="timeTableCell" id="c13-3" ></div></td>
+                <td><div class="timeTableCell" id="c13-4" ></div></td>
+                <td><div class="timeTableCell" id="c13-5" ></div></td>
+                <td><div class="timeTableCell" id="c13-6" ></div></td>
+                <td><div class="timeTableCell" id="c13-7" ></div></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+
+
+<!--회의록 파트-->
+
+
+<div class="main_sentence2">
+  <span class="blue">회의록</span>을 저장하고,<br><span class="blue">지난 회의록</span>을 확인해보세요.
+</div>
+        <div id="anchor2" class="container">
+
+
+          <!--지난 회의록, 회의록 목록-->
+            <div class="date_nav">
+                <p class="past"><a href="#">지난 회의록</a></p>
+                <p class="date"><a href="#">2019.03.16</a></p>
+                <p class="date"><a href="#">2019.03.20</a></p>
+                <p class="date"><a href="#">2019.04.04</a></p>
+                <p class="date"><a href="#">2019.04.19</a></p>
+            </div>
+          <!--회의록 텍스트 입력-->
+            <div class="textfield">
+                <!-- 회의록 제목-->
+                <div class="upper">
+                    <input id="title" type="text" value="회의록 제목을 작성하세요." class="removeOnFocus">
+                    <button id="save" type="submit" >저장</button>
+                </div>
+                <!-- 회의록 내용-->
+                <div class="notepad">
+                    <textarea id="field" tyep="text" value="회의록을 작성하세요" class="removeOnFocus">회의록을 작성하세요.</textarea>
+                </div>
+            </div>
+        </div>
+
+
+        <script>
+
+        var array = ['c1-1', 'c1-2', 'c1-3', 'c1-4', 'c1-5', 'c1-6', 'c1-7']
+        var array2 = ['c2-1', 'c2-2', 'c2-3', 'c2-4', 'c2-5', 'c2-6', 'c2-7']
+        var array3 = ['c3-1', 'c3-2', 'c3-3', 'c3-4', 'c3-5', 'c3-6', 'c3-7']
+        var array4 = ['c4-1', 'c4-2', 'c4-3', 'c4-4', 'c4-5', 'c4-6', 'c4-7']
+        var array5 = ['c5-1', 'c5-2', 'c5-3', 'c5-4', 'c5-5', 'c5-6', 'c5-7']
+        var array6 = ['c6-1', 'c6-2', 'c6-3', 'c6-4', 'c6-5', 'c6-6', 'c6-7']
+        var array7 = ['c7-1', 'c7-2', 'c7-3', 'c7-4', 'c7-5', 'c7-6', 'c7-7']
+        var array8 = ['c8-1', 'c8-2', 'c8-3', 'c8-4', 'c8-5', 'c8-6', 'c8-7']
+        var array9 = ['c9-1', 'c9-2', 'c9-3', 'c9-4', 'c9-5', 'c9-6', 'c9-7']
+        var array10 = ['c10-1', 'c10-2', 'c10-3', 'c10-4', 'c10-5', 'c10-6', 'c10-7']
+        var array11 = ['c11-1', 'c11-2', 'c11-3', 'c11-4', 'c11-5', 'c11-6', 'c11-7']
+        var array12 = ['c12-1', 'c12-2', 'c12-3', 'c12-4', 'c12-5', 'c12-6', 'c12-7']
+        var array13 = ['c13-1', 'c13-2', 'c13-3', 'c13-4', 'c13-5', 'c13-6', 'c13-7']
+
+
+
+        $('#line1 td').click(function() {
+        var i= $(this).index();
+        var element = document.getElementById(array[i-1]);
+        if (element.style.opacity === "100") {element.style.opacity = "0";element.style.transition ="0.2s";}
+        else {element.style.opacity = "100";element.style.transition ="0.2s"}
+        });
+
+
+        $('#line2 td').click(function() {
+        var i= $(this).index();
+        var element = document.getElementById(array2[i-1]);
+        if (element.style.opacity === "100") {element.style.opacity = "0";element.style.transition ="0.2s"}
+        else {element.style.opacity = "100";element.style.transition ="0.2s"}});
+
+        $('#line3 td').click(function() {
+        var i= $(this).index();
+        var element = document.getElementById(array3[i-1]);
+        if (element.style.opacity === "100") {element.style.opacity = "0";element.style.transition ="0.2s"}
+        else {element.style.opacity = "100";element.style.transition ="0.2s"}});
+
+        $('#line4 td').click(function() {
+        var i= $(this).index();
+        var element = document.getElementById(array4[i-1]);
+        if (element.style.opacity === "100") {element.style.opacity = "0";element.style.transition ="0.2s"}
+        else {element.style.opacity = "100";element.style.transition ="0.2s"}});
+
+        $('#line5 td').click(function() {
+        var i= $(this).index();
+        var element = document.getElementById(array5[i-1]);
+        if (element.style.opacity === "100") {element.style.opacity = "0";element.style.transition ="0.2s"}
+        else {element.style.opacity = "100";element.style.transition ="0.2s"}});
+
+        $('#line6 td').click(function() {
+        var i= $(this).index();
+        var element = document.getElementById(array6[i-1]);
+        if (element.style.opacity === "100") {element.style.opacity = "0";element.style.transition ="0.2s"}
+        else {element.style.opacity = "100";element.style.transition ="0.2s"}});
+
+        $('#line7 td').click(function() {
+        var i= $(this).index();
+        var element = document.getElementById(array7[i-1]);
+        if (element.style.opacity === "100") {element.style.opacity = "0";element.style.transition ="0.2s"}
+        else {element.style.opacity = "100";element.style.transition ="0.2s"}});
+
+        $('#line8 td').click(function() {
+        var i= $(this).index();
+        var element = document.getElementById(array8[i-1]);
+        if (element.style.opacity === "100") {element.style.opacity = "0";element.style.transition ="0.2s"}
+        else {element.style.opacity = "100";element.style.transition ="0.2s"}});
+
+        $('#line9 td').click(function() {
+        var i= $(this).index();
+        var element = document.getElementById(array9[i-1]);
+        if (element.style.opacity === "100") {element.style.opacity = "0";element.style.transition ="0.2s"}
+        else {element.style.opacity = "100";element.style.transition ="0.2s"}});
+
+        $('#line10 td').click(function() {
+        var i= $(this).index();
+        var element = document.getElementById(array10[i-1]);
+        if (element.style.opacity === "100") {element.style.opacity = "0";element.style.transition ="0.2s"}
+        else {element.style.opacity = "100";element.style.transition ="0.2s"}});
+
+        $('#line11 td').click(function() {
+        var i= $(this).index();
+        var element = document.getElementById(array11[i-1]);
+        if (element.style.opacity === "100") {element.style.opacity = "0";element.style.transition ="0.2s"}
+        else {element.style.opacity = "100";element.style.transition ="0.2s"}});
+
+        $('#line12 td').click(function() {
+        var i= $(this).index();
+        var element = document.getElementById(array12[i-1]);
+        if (element.style.opacity === "100") {element.style.opacity = "0";element.style.transition ="0.2s"}
+        else {element.style.opacity = "100";element.style.transition ="0.2s"}});
+
+        $('#line13 td').click(function() {
+        var i= $(this).index();
+        var element = document.getElementById(array13[i-1]);
+        if (element.style.opacity === "100") {element.style.opacity = "0";element.style.transition ="0.2s"}
+        else {element.style.opacity = "100";element.style.transition ="0.2s"}});
+
+
+        $(document).ready(function(){
+        $('.removeOnFocus').each(function()
+        {this.data = new Object(); //TODO don't overwrite previous data
+        this.data.value = this.value;
+        $(this).focus(function(){
+          if (this.value == this.data.value)
+              this.value = '';});
+        $(this).blur(function(){
+          if (this.value == '')
+              this.value = this.data.value;});});});
+
+
+    
+
+        </script>
+
+    </body>
+</html>
