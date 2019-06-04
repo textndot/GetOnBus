@@ -1,0 +1,41 @@
+<div class="signin">
+    <p>회원 가입 & 팀 만들기</p>
+</div>
+<div class="container" id="warning">
+    <p>*표시는 필수 입력 항목입니다</p>
+</div>
+<%= form_tag users_path do %>
+    <table>
+        <tbody>
+            <tr>
+                <th class="inputitem">이메일<sup>*</sup></th>
+                <td><input class="inputbox" type="email" name="email" placeholder="test@test.com" required></td>
+            </tr>
+            <tr>
+                <th class="inputitem">비밀번호<sup>*</sup></th>
+                <td><input class="inputbox" type="password" name="password" required></td>
+            </tr>
+            <tr>
+                <th class="inputitem">비밀번호 확인<sup>*</sup></th>
+                <td><input class="inputbox" type="password" name="password_confirmation" required></td>
+            </tr>
+            <tr>
+                <th class="inputitem">팀이름<sup>*</sup></th>
+                <td><input class="inputbox" type="text" name="teamname" placeholder="버스타자" required></td>
+            </tr>
+            <tr>
+                <th class="inputitem">수업명<sup>*</sup></th>
+                <td><input class="inputbox" type="text" name="lecture" placeholder="웹프로그래밍개론" required></td>
+            </tr>
+            <tr>
+                <th class="inputitem">출발 날짜</th>
+                <td><input class="inputbox" type="date" name="start_date" value="2019-01-01"></td>
+            </tr>
+            <tr>
+                <th class="inputitem">도착 날짜</th>
+                <td><input class="inputbox" type="date" name="end_date" value="2019-01-01"></td>
+            </tr>
+        </tbody>
+    </table>
+    <button class="button" type="submit">가입하기</button>
+<% end %>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hello</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR" rel="stylesheet">
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <div id="global-header">
+      <div class="container">
+        <div class="logo"><%= link_to image_tag('logowhite@2x.png', class:"logowhite"), '/' %></div>
+        <ul class="menu">
+          <li class="item"><%= link_to 'Home', '/' %></li>
+          <% if user_signed_in? %>
+            <li class="item"><%= current_user.teamname %></li>
+            <li class="item"><%= link_to '로그아웃', session_path(current_user), method: 'delete'  %></li>
+          <% else %>
+            <li class="item"><%= link_to 'Register', new_user_path %></li>
+            <li class="item"><%= link_to '로그인', new_session_path %></li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+    <div class="hidden" id="wrapper">
+      <% flash.each do |name, msg| %>
+        <div class='alert alert-<%= name %>'>
+          <%= msg %>
+        </div>
+      <% end %>
+    </div>
+    <%= yield %>
+  </body>
+  <script>
+
+    $(document).ready(function() {
+      setTimeout(function() {
+        $('#wrapper').fadeOut("slow", function() {
+          $(this).remove();
+        })
+      }, 1500);
+    });
+  </script>
+</html>

@@ -1,0 +1,20 @@
+<div>
+    2 곱하기 2는 <strong><%= 2 * 2 %></strong>입니다
+    2 곱하기 3은 <strong><%= 2 * 3 %></strong>입니다
+</div>
+
+<% if 1+1 == 2 %>
+    <span><%= 1 + 1 == 2 %></span>
+<% else %>
+    <span><%= 1 + 1 != 2 %></span>
+<% end %>
+
+<h1>ITZY</h1>
+<% ["황예지", "최지수", "신류진", "이채령", "신유나"].each do |name| %>
+    <span><%= name %></span>
+<% end %>
+
+<h1>Red Velvet</h1>
+<% ["배주현", "강슬기", "손승완", "박수영", "김예림"].each do |name| %>
+    <span><%= name %></span>
+<% end %>

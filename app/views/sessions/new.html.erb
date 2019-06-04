@@ -1,0 +1,18 @@
+<div class="login">
+    <p>로그인</p>
+</div>
+<%= form_tag sessions_path do %>
+    <table>
+        <tbody>
+            <tr>
+                <th class="inputitem">이메일</th>
+                <td><input class="inputbox" type="email" name="email" placeholder="이메일" required></td>
+            </tr>
+            <tr>
+                <th class="inputitem">비밀번호</th>
+                <td><input class="inputbox" type="password" name="password" placeholder="비밀번호" required></td>
+            </tr>
+        </tbody>
+    </table>
+    <button class="button" type="submit">로그인</button>
+<% end %>
