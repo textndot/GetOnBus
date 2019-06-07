@@ -7,21 +7,24 @@
     <link rel="stylesheet" type="text/css" href="mainpage.css">
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR" rel="stylesheet">
     <script src="jquery-3.4.1.min.js"></script>
+    <meta property="og:title" content="버스타자(Bustaja)">
+    <meta property="og:title" content="팀플을 효과적으로 관리해보세요.">
+    <meta property="og:image" content="logo_3.png">
   </head>
 
   <body>
 
     <!--왼쪽 내비 바-->
         <div class="left_nav_bar">
-
+            <a href="#anchor2"><img src="./logo_3.png" class="illustration_nav"></a>
             <ul class="left_top_nav">
                 <hr>
                 <a href="#anchor1"><li class="left_top_nav_3">About</li></a>
                 <hr>
                 <li class="left_top_nav_3">팀 생성</li>
                 <hr>
-                <li>팀 검색</li>
-                <input type="text" id="search_team_name" class="removeOnFocus" value="팀 이름을 입력하세요.">
+                <li onclick="openNav()" class="left_top_nav_3">팀 검색</li>
+                <hr>
             </ul>
             <ul class="left_bottom_nav">
                 <hr>
@@ -30,7 +33,34 @@
             <ul>
         </div>
 
-    <div class="Rectangle">
+        <div id="mySidenav" class="sidenav">
+          <input type="text" id="search_team_name" class="removeOnFocus" value="팀 이름을 입력하세요.">
+          <button id="search_save" type="submit" >검색</button>
+          <button id="search_reset" type="submit" >초기화</button>
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+          <table id="usertable">
+              <tbody>
+                  <tr>
+                      <th id="header">아이디</th>
+                      <th id="header">팀 이름</th>
+                      <th id="header">시작일</th>
+                      <th id="header">종료일</th>
+                      <th id="header"> </th>
+                  </tr>
+
+                      <tr>
+                          <td id="tableitem"></td>
+                          <td id="tableitem"></td>
+                          <td id="tableitem"></td>
+                          <td id="tableitem"></td>
+                          <td id="tableitem"></td>
+                      </tr>
+              </tbody>
+          </table>
+
+        </div>
+
+    <div class="Rectangle" id="anchor2">
       <div id="login"><a href="log_in.html">로그인</a></div>
 
       <a href="./sign_in.html"><div class="signin">
@@ -45,7 +75,7 @@
         <div class="sub_sentence">“버스타자와 함께 팀플 모임 시간과 회의록을<br>효과적으로 관리해보세요.”
         </div>
         <div>
-          <img src="./illustration.png" class="illustration">
+          <img src="./bustaja_background.png" class="illustration">
         </div>
     </div>
 
@@ -81,12 +111,33 @@
       </section>
       <div class="footer">
         <img src="./mainpagebus.png" class="mainpagebus">
-        <a href="sign_in.html"><p class="goto_signin">팀 생성하러 가기</p>
-        <img src="./angle-down-solid.svg" class="arrow"></a>
       </div>
     </div>
-
+<div class="credit">
+<div>Icons are licensed by <a href="https://fontawesome.com//" title=“Font Awesome”><span id="credit_black">Font Awesome</span></a> and changes are made</div>
+<div id="credit_name">© 공채린 박성우 우지명 임지원 홍유진</div>
+</div>
   <script>
+
+  //팀 검색 사이드바 관련 - 열 때
+  function openNav() {
+  document.getElementById("mySidenav").style.width = "60%";
+  document.getElementById("usertable").style.opacity ="100";
+  document.getElementById("search_team_name").style.opacity ="100";
+  document.getElementById("mySidenav").style.opacity ="100";
+  document.getElementById("search_save").style.opacity ="100";
+  document.getElementById("search_reset").style.opacity ="100";
+
+  }
+  //팀 검색 사이드바 관련 - 닫을 때
+  function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("usertable").style.opacity ="0";
+  document.getElementById("search_team_name").style.opacity ="0";
+  document.getElementById("mySidenav").style.opacity ="0";
+  document.getElementById("search_save").style.opacity ="0";
+  document.getElementById("search_reset").style.opacity ="0";
+  }
 
   $(document).ready(function(){
   $('.removeOnFocus').each(function()

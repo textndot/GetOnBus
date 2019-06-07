@@ -12,8 +12,11 @@ html {scroll-behavior: smooth;
 a {text-decoration: none;
   color: black;}
 
-  hr {margin: 0px;
-      height: 1px;}
+hr {margin: 0px;
+    height: 0px;
+    padding: 0px;
+    border-style: solid #979797;
+    border-bottom: 0px;}
 
 #schoolbus {width:150px;
           margin-top:0px;
@@ -46,6 +49,13 @@ a {text-decoration: none;
   left: 0px;
   z-index: 2;
 }
+
+
+.illustration_nav
+{margin-top: 30px;
+margin-left: 70px;
+padding-bottom: 20px;
+width: 200px;}
 
 /*왼쪽 상단 바*/
 /*시간표 회의록 팀검색 팀생성*/
@@ -82,22 +92,129 @@ margin: 0px;
 transition: 0.2s;}
 
 
+
 /*팀 검색*/
+
+/*팀 검색시 나타나는 날개 바*/
+.sidenav {
+  height: 60%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 218px;
+  left: 339px;
+  background-color: rgba(255, 255, 255, 1);
+  box-shadow: 0 5px 15px 10px rgba(0, 0, 0, 0.09);
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  text-align:center;
+  opacity: 0;
+}
+
+.sidenav a:hover{
+  color: #5787ff;
+}
+
+/*팀 검색 닫기 버튼*/
+.sidenav .closebtn {
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/*팀 검색, 초기화 버튼*/
+#search_save:hover, #search_reset:hover {
+  box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.23);
+}
+
+#search_save:focus, #search_reset:focus {
+  outline: none;
+}
+
+#search_save {
+    font-family: 'Noto Sans KR';
+    left: 520px;
+    margin-top: 13px;
+    margin-left: 20px;
+    background-color: #5586ff;
+    border-radius: 6px;
+    border-style: none;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.08);
+    width: 110px;
+    height: 40px;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 400;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+#search_reset{
+    font-family: 'Noto Sans KR';
+    left: 520px;
+    margin-top: 13px;
+    margin-left: 10px;
+    background-color: #5586ff;
+    border-radius: 6px;
+    border-style: none;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.08);
+    width: 110px;
+    height: 40px;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 400;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+/*팀 검색 입력 부분*/
+
 #search_team_name
 {display: inline-block;
   position: relative;
-  width: 230px;
-  height: 40px;
+  width: 300px;
+  height: 60px;
+  left: 0px;
   margin-bottom: 10px;
   margin-top: -10px;
-  padding-left: 10px;
-  font-size: 15px;
-  color: gray;}
+  padding-left: 14px;
+  font-size: 21px;
+  font-weight: 400;
+  color: #3D3C3C;
+  border-style: 0.1px solid;
+  }
 
 #search_team_name:focus
-{outline:none;box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.3);
-border-style: solid;
-border-width: 0px;}
+{outline-style: none;}
+
+
+/*팀 검색 결과 (아이디, 팀 이름, 날짜 등)*/
+#usertable
+{ position: absolute;
+  top: 30%;
+  margin-left: 15%;
+  font-weight: 200;
+  font-family: 'Noto Sans KR';
+  width: 70%;}
+
+#header
+{font-weight: 300;
+  font-size: 20.4px;
+font-family: 'Noto Sans KR';
+padding-bottom: 10px;}
+
+#tableitem
+{ padding-top: 3px;
+  padding-bottom: 3px;
+  height: 30px;
+  font-size: 19px;
+  font-family: 'Noto Sans KR';
+  font-weight: 300;
+  }
+
 
 /* 전체 화면 */
 .Rectangle {
@@ -187,8 +304,8 @@ border-width: 0px;}
     letter-spacing: -0.4px;
     color: #3b3b3b;
     position: relative;
-    left: 470px;
-    top: 150px;
+    left: 420px;
+    top: 130px;
   }
 
 .blue {
@@ -209,23 +326,23 @@ border-width: 0px;}
     letter-spacing: -0.8px;
     color: #3b3b3b;
     position: relative;
-    left: 470px;
-    top: 170px;
+    left: 420px;
+    top: 150px;
 }
 
 /* 메인페이지 일러스트 부분 */
 .illustration {
-    width: 70%;
-    height: 70%;
-    position: relative;
-    top: 100px;
-    left: 550px;
+    width: 740px;
+    z-index: -1;
+    position: absolute;
+    top: 235px;
+    right: 50px;
     margin-bottom: 200px;
 }
 
 /* '버스타자 둘러보기' 바깥쪽 파란색 큰 box */
 .blue_box {
-    margin-top: 100px;
+    margin-top: 1000px;
     width: 100%;
     height: 750px;
     background-color: #5586ff;
@@ -395,13 +512,13 @@ border-width: 0px;}
   float: right;
 }
 .mainpagebus{
-  width: 600px;
+  width: 500px;
   position: relative;
   float: right;
   margin-right: 100px;
   margin-bottom: 0px;
   padding-bottom: 0px;
-  top: -80px;
+  top: -60px;
 }
 
 /* 우측 하단 '회원가입 하러 가기' 텍스트 부분 */
@@ -437,3 +554,32 @@ border-width: 0px;}
 /* 회원가입 하러 가기 옆의 화살표는 이미지로 처리해야 될 듯*/
 
 a {text-decoration: none;}
+
+
+.credit
+{font-size: 9px;
+display: block;
+line-height: 1.3;
+position: absolute;
+bottom: 10px;
+padding-top: 10px;
+padding-bottom: 25px;
+padding-left: 77%;
+height: 50px;
+top: 2250px;
+right: 0px;
+background-color: #FAFAFA;
+color: #BDBDBD;
+overflow-x: hidden;
+overflow-y: hidden;
+
+}
+
+#credit_black
+{color:black;}
+.credit a {color: #BDBDBD;}
+
+#credit_name
+{color: #BDBDBD;
+  font-size: 6px;
+  line-height: 1.5;}

@@ -79,9 +79,9 @@ body {background-color: #fafafa;
     width: 120px;
     height: 40px;
     border-radius: 6px;
-    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.3);
-    border: solid 1.5px gray;
-    background-color:gray;
+    
+    border: solid 1.5px #B3B3B3;
+    background-color:#B3B3B3;
     color: #FFFFFF;
     font-size: 18px;
     padding-top: 4px;
@@ -92,4 +92,5 @@ body {background-color: #fafafa;
 .button:hover, .button:focus {
 border: 0px;
   outline: none;
-background-color:#5282ff;}
+background-color:#5282ff;
+box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.3);}

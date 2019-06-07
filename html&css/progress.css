@@ -1,0 +1,23 @@
+/*
+// Place all the styles related to the progress controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/*/
+
+.row {
+    border:1px solid black;
+    text-align: center;
+}
+
+.row td {
+    border-top:1px solid black;
+    border-bottom:1px solid black;
+    border-right: 1px dashed black;
+    text-align: center;
+    width: 10px;
+    height: 10px;
+}
+
+.one {
+    background-image: url( '/assets/images/bus.png' );
+    width: 30px;
+}
