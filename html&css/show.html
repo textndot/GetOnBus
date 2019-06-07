@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="progress.css" type="text/css">
+  </head>
+  <body>
+
+    <h1> Team Project Progress Timeline </h1>
+
+    <table>
+        <tbody>
+            <tr class="row">
+                <% for i in (1..100) %>
+                    <% if i==@progress %>
+                        <td class="one"><%= i %></td>
+                        <% next %>
+                    <% else %>
+                        <td></td>
+                    <% end %>
+                <% end %>
+            </tr>
+        </tbody>
+    </table>
+    <!--<%= @progress %>-->
+
+
+  </body>
+</html>

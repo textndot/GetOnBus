@@ -4,20 +4,19 @@
         <title>
             팀원관리
         </title>
-        <meta charset= utf-8>
         <link rel="stylesheet" type="text/css" href="teammates.css">
         <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR" rel="stylesheet">
-
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap" rel="stylesheet">
         <script src="jquery-3.4.1.min.js"></script>
         <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
     </head>
     <body>
 
 <!-- 상단 바, 수업명 박스 -->
       <div class="Rectangle">
           <div class="top-bar">
-            <!-- 시작일 종료일에 따라 버스 이동 -->
+
             <table id="busmove">
                 <tbody>
                     <tr class="row">
@@ -126,8 +125,6 @@
             </table>
             <img id="flag" src="flag.png">
           </div>
-
-
           <div class="nav-bar">
               <div class="course">
                   <p> 웹프로그래밍 개론 </p>
@@ -135,37 +132,11 @@
           </div>
       </div>
 
+<!-- 버스 이동 파트 -->
 
-<!--팀 검색 사이드바 (날개) )-->
 
-  <div id="mySidenav" class="sidenav">
-    <input type="text" id="search_team_name" class="removeOnFocus" value="팀 이름을 입력하세요.">
-    <button id="search_save" type="submit" >검색</button>
-    <button id="search_reset" type="submit" >초기화</button>
-    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-    <table id="usertable">
-        <tbody>
-            <tr>
-                <th id="header">아이디</th>
-                <th id="header">팀 이름</th>
-                <th id="header">시작일</th>
-                <th id="header">종료일</th>
-                <th id="header"> </th>
-            </tr>
 
-                <tr>
-                    <td id="tableitem"></td>
-                    <td id="tableitem"></td>
-                    <td id="tableitem"></td>
-                    <td id="tableitem"></td>
-                    <td id="tableitem"></td>
-                </tr>
-        </tbody>
-    </table>
-
-  </div>
-
-<!--왼쪽 내비 전체 바-->
+<!--왼쪽 내비 바-->
     <div class="left_nav_bar">
         <ul class="left_top_nav">
             <hr>
@@ -173,7 +144,7 @@
             <hr>
             <a href="#anchor2"><li class="left_top_nav_3">회의록</li></a>
             <hr>
-            <li onclick="openNav()" class="left_top_nav_3">팀 검색</li>
+            <a href="search.html"><li class="left_top_nav_3">팀 검색</li></a>
             <hr>
             <a href="#"><li class="left_top_nav_3">팀 생성</li></a>
             <hr>
@@ -191,7 +162,10 @@
   <div id="anchor1">
 
 
-
+        <!--시간표 기능 설명 문장-->
+        <div class="main_sentence">
+          안 되는 시간을 클릭하여<br><span class="blue">회의 시간</span>을 정해보세요.
+        </div>
         <!--시간표 표 전체-->
         <div class="tablebox">
             <table>
@@ -355,12 +329,6 @@
               <!--초기화 버튼-->
             <div class="Oval"><div class="Oval_text">초기화</div></div>
         </div>
-
-                <!--시간표 기능 설명 문장-->
-                <div class="main_sentence">
-                  안 되는 시간을 클릭하여<br><span class="blue">회의 시간</span>을 정해보세요.
-                </div>
-
     </div>
 
 
@@ -378,10 +346,10 @@
           <!--지난 회의록, 회의록 목록-->
             <div class="date_nav">
                 <p class="past"><a href="#">지난 회의록</a></p>
-                <p class="date"><a href="#">2019.03.16</a><button class="delete">&times;</button></p>
-                <p class="date"><a href="#">2019.03.20</a><button class="delete">&times;</button></p>
-                <p class="date"><a href="#">2019.04.04</a><button class="delete">&times;</button></p>
-                <p class="date"><a href="#">2019.04.19</a><button class="delete">&times;</button></p>
+                <p class="date"><a href="#">2019.03.16</a></p>
+                <p class="date"><a href="#">2019.03.20</a></p>
+                <p class="date"><a href="#">2019.04.04</a></p>
+                <p class="date"><a href="#">2019.04.19</a></p>
             </div>
           <!--회의록 텍스트 입력-->
             <div class="textfield">
@@ -398,37 +366,16 @@
         </div>
 
   <div class="credit">
-
 <div>Icons made by <a href="https://www.freepik.com/" title="Freepik" id="credit_black">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
 <div>Icons made by <a href="https://www.flaticon.com/authors/smashicons" title="Smashicons" id="credit_black">Smashicons</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+<div id="credit_name">© 공채린 박성우 우지명 임지원 홍유진</div>
   </div>
 
         <script>
 
-        //팀 검색 사이드바 관련 - 열 때
-        function openNav() {
-        document.getElementById("mySidenav").style.width = "60%";
-        document.getElementById("usertable").style.opacity ="100";
-        document.getElementById("search_team_name").style.opacity ="100";
-        document.getElementById("mySidenav").style.opacity ="100";
-        document.getElementById("search_save").style.opacity ="100";
-        document.getElementById("search_reset").style.opacity ="100";
-
-        }
-        //팀 검색 사이드바 관련 - 닫을 때
-        function closeNav() {
-        document.getElementById("mySidenav").style.width = "0";
-        document.getElementById("usertable").style.opacity ="0";
-        document.getElementById("search_team_name").style.opacity ="0";
-        document.getElementById("mySidenav").style.opacity ="0";
-        document.getElementById("search_save").style.opacity ="0";
-        document.getElementById("search_reset").style.opacity ="0";
-        }
 
 
 
-
-        // 시간표 기능
         var array = ['c1-1', 'c1-2', 'c1-3', 'c1-4', 'c1-5', 'c1-6', 'c1-7']
         var array2 = ['c2-1', 'c2-2', 'c2-3', 'c2-4', 'c2-5', 'c2-6', 'c2-7']
         var array3 = ['c3-1', 'c3-2', 'c3-3', 'c3-4', 'c3-5', 'c3-6', 'c3-7']
@@ -448,10 +395,9 @@
         $('#line1 td').click(function() {
         var i= $(this).index();
         var element = document.getElementById(array[i-1]);
-        if (element.style.opacity === "100") {element.style.opacity = "0";element.style.transition ="0.2s";
-        }
-        else {element.style.opacity = "100";element.style.transition ="0.2s";
-        }
+        if (element.style.opacity === "100") {element.style.opacity = "0";element.style.transition ="0.2s";}
+        else {element.style.opacity = "100";element.style.transition ="0.2s"}
+
         });
 
 
@@ -527,7 +473,7 @@
         if (element.style.opacity === "100") {element.style.opacity = "0";element.style.transition ="0.2s"}
         else {element.style.opacity = "100";element.style.transition ="0.2s"}});
 
-        // input text 클릭 시 기본 값 사라지는 함수
+
         $(document).ready(function(){
         $('.removeOnFocus').each(function()
         {this.data = new Object(); //TODO don't overwrite previous data
@@ -540,7 +486,7 @@
               this.value = this.data.value;});});});
 
 
-        //초기화 버튼 함수
+
               $('.Oval').click(function() {
               for (var i =0;i<91;i++)
               { var element = document.getElementsByClassName('timeTableCell')[i];
